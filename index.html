@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proyecto Final</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <style>
+      .bg-primary {
+        background-color: #037bc0 !important;
+      }
+      .bg-success {
+        background-color: #41ff41 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="text-center py-3">
+      <h1>Tienda de <span>Muebles</span></h1>
+    </header>
+    <!-- NAV -->
+    <!-- <nav id="nav-main">
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Nosotros</a></li>
+        <li><a href="">Tienda</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Galeria</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </nav> -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-primary"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand p-2 bg-success text-dark" href="#">Logo</a>
+        <button
+          class="navbar-toggler border border-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 text-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Busqueda"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- SECTION -->
+    <article class="hero-image">
+      <div>
+        <h1>Tienda en línea con Flexbox</h1>
+      </div>
+    </article>
+    <!-- <section id="hero">
+      <img src="./principal.jpg" alt="" />
+    </section> -->
+    <!-- PRINCIPAL -->
+    <main>
+      <!-- PRODUCTOS -->
+      <h2>Nuestros Productos</h2>
+      <!-- SECCION 1 -->
+      <section id="section-1">
+        <!-- PRODUCTO 1 -->
+        <article id="producto-1">
+          <div id="col-1" class="box-descripcion">
+            <img src="./producto1.jpg" alt="" />
+          </div>
+          <div id="col-2" class="box-descripcion">
+            <h3>Producto 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+              fugit, dignissimos cum facilis libero temporibus vero voluptates
+              doloremque, minima laborum mollitia tempore distinctio.
+            </p>
+            <span class="precio">$10.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- PRODUCTO 2 y 3 -->
+      <section id="section-2">
+        <article id="producto-2">
+          <img src="./producto2.jpg" alt="" />
+          <div class="box-descripcion">
+            <h3>Producto 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              voluptate animi omnis et explicabo debitis libero cumque ullam
+              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
+              pariatur, minima aut!
+            </p>
+            <span class="precio">$10.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+        <article id="producto-3">
+          <img src="./producto3.jpg" alt="" />
+          <div class="box-descripcion">
+            <h3>Producto 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              voluptate animi omnis et explicabo debitis libero cumque ullam
+              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
+              pariatur, minima aut!
+            </p>
+            <span class="precio">$5.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- PRODUCTO 4 -->
+      <section id="section-3">
+        <article id="producto-4">
+          <img src="./producto4.jpg" alt="" />
+          <div class="box-descripcion">
+            <h3>Producto 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              voluptate animi omnis et explicabo debitis libero cumque ullam
+              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
+              pariatur, minima aut!
+            </p>
+            <span class="precio">$5.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+        <article id="producto-5">
+          <img src="./producto5.jpg" alt="" />
+          <div class="box-descripcion">
+            <h3>Producto 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              voluptate animi omnis et explicabo debitis libero cumque ullam
+              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
+              pariatur, minima aut!
+            </p>
+            <span class="precio">$5.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+        <article id="producto-6">
+          <img src="./producto6.jpg" alt="" />
+          <div class="box-descripcion">
+            <h3>Producto 6</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              voluptate animi omnis et explicabo debitis libero cumque ullam
+              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
+              pariatur, minima aut!
+            </p>
+            <span class="precio">$5.00</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- CATEGORIAS -->
+      <h2>Categorias de Productos</h2>
+      <section class="categorias">
+        <div class="oficina">
+          <img src="./categoria1.jpg" alt="" />
+          <h2>Oficina</h2>
+        </div>
+        <div class="hogar">
+          <img src="./categoria2.jpg" alt="" />
+          <h2>Hogar</h2>
+        </div>
+        <div class="cocina">
+          <img src="./categoria3.jpg" alt="" />
+          <h2>Cocina</h2>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section id="footer">
+        <div id="box-categorias">
+          <h3>Categorias</h3>
+          <nav>
+            <ul>
+              <li><a href="">Cocina</a></li>
+              <li><a href="">Oficina</a></li>
+              <li><a href="">Jardin</a></li>
+              <li><a href="">Cochera</a></li>
+              <li><a href="">Dormitorio</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="box-nosotros">
+          <h3>Nosotros</h3>
+          <nav>
+            <ul>
+              <li><a href="">Nuestra Historia</a></li>
+              <li><a href="">Mision, vision y valores</a></li>
+              <li><a href="">Carrera</a></li>
+              <li><a href="">Politicas de privacidad</a></li>
+              <li><a href="">Terminos del servicio</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="box-soporte">
+          <h3>Soporte</h3>
+          <nav>
+            <ul>
+              <li><a href="">Preguntas frecuentes</a></li>
+              <li><a href="">Ayuda en linea</a></li>
+              <li><a href="">Soporte y seguridad</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section id="disclaimer">
+        <h2>Todos los derechos reservados. Tienda de <span>Muebles</span></h2>
+      </section>
+    </footer>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+  </body>
+</html>
