@@ -9,14 +9,36 @@
       href="https://fonts.googleapis.com/css2?family=Playfair&family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
       .bg-primary {
-        background-color: #037bc0 !important;
+        background-color: var(--bs-blue) !important;
       }
       .bg-success {
-        background-color: #41ff41 !important;
+        background-color: var(--bs-green) !important;
+      }
+
+      nav a {
+        color: var(--bs-white) !important;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .nav-link,
+      footer a {
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+
+      .nav-link:hover,
+      footer a:hover {
+        border-bottom: 1px solid white;
       }
     </style>
   </head>
@@ -95,168 +117,495 @@
       <img src="./principal.jpg" alt="" />
     </section> -->
     <!-- PRINCIPAL -->
-    <main>
+    <main class="py-3 px-3 px-xs-3 px-sm-5 px-lg-5">
       <!-- PRODUCTOS -->
-      <h2>Nuestros Productos</h2>
+      <h2 class="mt-4 text-center">Nuestros Productos</h2>
       <!-- SECCION 1 -->
-      <section id="section-1">
+      <section class="my-5" id="seccion-1">
         <!-- PRODUCTO 1 -->
-        <article id="producto-1">
-          <div id="col-1" class="box-descripcion">
-            <img src="./producto1.jpg" alt="" />
+        <article class="row gx-0" id="producto-1">
+          <div id="col-1" class="col-lg-6 overflow-hidden box-descripcion">
+            <img src="images/producto1.jpg" alt="" />
           </div>
-          <div id="col-2" class="box-descripcion">
+          <div
+            id="col-2"
+            class="col-lg-6 bg-primary text-white p-4 text-center d-flex flex-column justify-content-center align-items-center box-descripcion"
+          >
             <h3>Producto 1</h3>
-            <p>
+            <p class="txt-descripcion">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
               fugit, dignissimos cum facilis libero temporibus vero voluptates
               doloremque, minima laborum mollitia tempore distinctio.
             </p>
-            <span class="precio">$10.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4">$10.00</span>
+            <button
+              class="rounded-2 shadow btn-bounce bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto1"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
       </section>
 
-      <!-- PRODUCTO 2 y 3 -->
-      <section id="section-2">
-        <article id="producto-2">
-          <img src="./producto2.jpg" alt="" />
-          <div class="box-descripcion">
+      <!-- SECCION 2 -->
+      <section class="row my-3" id="seccion-2">
+        <!-- PRODUCTO 2 -->
+        <article class="col-lg-6 pb-4" id="producto-2">
+          <img src="images/producto2.jpg" alt="" />
+
+          <div class="box-descripcion bg-primary text-white p-4 text-center">
             <h3>Producto 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              voluptate animi omnis et explicabo debitis libero cumque ullam
-              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
-              pariatur, minima aut!
+            <p class="txt-descripcion">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              quidem quo, obcaecati adipisci ipsa commodi sit incidunt
+              consequuntur consectetur nemo harum neque, magnam dolorem
+              architecto ad eveniet cupiditate pariatur dignissimos.
             </p>
-            <span class="precio">$10.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4"> $5.00 </span>
+            <button
+              class="rounded-2 shadow btn-zoom bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto2"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
-        <article id="producto-3">
-          <img src="./producto3.jpg" alt="" />
-          <div class="box-descripcion">
+        <!-- PRODUCTO 3 -->
+        <article class="col-lg-6" id="producto-3">
+          <img src="images/producto3.jpg" alt="" />
+          <div class="box-descripcion bg-primary text-white p-4 text-center">
             <h3>Producto 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              voluptate animi omnis et explicabo debitis libero cumque ullam
-              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
-              pariatur, minima aut!
+            <p class="txt-descripcion">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              quidem quo, obcaecati adipisci ipsa commodi sit incidunt
+              consequuntur consectetur nemo harum neque, magnam dolorem
+              architecto ad eveniet cupiditate pariatur dignissimos.
             </p>
-            <span class="precio">$5.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4"> $5.00 </span>
+            <button
+              class="rounded-2 shadow btn-zoom bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto3"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
       </section>
 
-      <!-- PRODUCTO 4 -->
-      <section id="section-3">
-        <article id="producto-4">
-          <img src="./producto4.jpg" alt="" />
-          <div class="box-descripcion">
+      <!-- SECCION 3 -->
+      <section id="seccion-3" class="row my-5">
+        <!-- PRODUCTO 4 -->
+        <article id="producto-4" class="col-lg-4 pb-4">
+          <img src="images/producto4.jpg" alt="" />
+          <div
+            id="box-descripcion"
+            class="bg-primary text-white p-4 text-center"
+          >
             <h3>Producto 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              voluptate animi omnis et explicabo debitis libero cumque ullam
-              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
-              pariatur, minima aut!
+            <p id="txt-descripcion">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo
+              optio quas! Fugiat dolores repellat cumque amet tempore id harum
+              sunt quo ipsum quae rerum, at sit placeat nostrum enim?
             </p>
-            <span class="precio">$5.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4"> $5.00 </span>
+            <button
+              class="rounded-2 shadow btn-zoom bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto4"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
-        <article id="producto-5">
-          <img src="./producto5.jpg" alt="" />
-          <div class="box-descripcion">
+
+        <!-- PRODUCTO 5 -->
+        <article id="producto-5" class="col-lg-4 pb-4">
+          <img src="images/producto5.jpg" alt="" />
+          <div
+            id="box-descripcion"
+            class="bg-primary text-white p-4 text-center"
+          >
             <h3>Producto 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              voluptate animi omnis et explicabo debitis libero cumque ullam
-              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
-              pariatur, minima aut!
+            <p id="txt-descripcion">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo
+              optio quas! Fugiat dolores repellat cumque amet tempore id harum
+              sunt quo ipsum quae rerum, at sit placeat nostrum enim?
             </p>
-            <span class="precio">$5.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4"> $5.00 </span>
+            <button
+              class="rounded-2 shadow btn-zoom bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto5"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
-        <article id="producto-6">
-          <img src="./producto6.jpg" alt="" />
-          <div class="box-descripcion">
+
+        <!-- PRODUCTO 6 -->
+        <article id="producto-6" class="col-lg-4">
+          <img src="images/producto6.jpg" alt="" />
+          <div
+            id="box-descripcion"
+            class="bg-primary text-white p-4 text-center"
+          >
             <h3>Producto 6</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              voluptate animi omnis et explicabo debitis libero cumque ullam
-              illo laboriosam amet eveniet tempore deleniti sed quaerat officiis
-              pariatur, minima aut!
+            <p id="txt-descripcion">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo
+              optio quas! Fugiat dolores repellat cumque amet tempore id harum
+              sunt quo ipsum quae rerum, at sit placeat nostrum enim?
             </p>
-            <span class="precio">$5.00</span>
-            <button>Agregar al carrito</button>
+            <span class="precio mb-3 d-block mt-1 fw-bold fs-4"> $5.00 </span>
+            <button
+              class="rounded-2 shadow btn-zoom bg-success py-2 px-3 fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#producto6"
+            >
+              Agregar al carrito
+            </button>
           </div>
         </article>
       </section>
 
       <!-- CATEGORIAS -->
       <h2>Categorias de Productos</h2>
-      <section class="categorias">
-        <div class="oficina">
-          <img src="./categoria1.jpg" alt="" />
-          <h2>Oficina</h2>
-        </div>
-        <div class="hogar">
-          <img src="./categoria2.jpg" alt="" />
-          <h2>Hogar</h2>
-        </div>
-        <div class="cocina">
-          <img src="./categoria3.jpg" alt="" />
-          <h2>Cocina</h2>
-        </div>
+      <section class="categorias row mt-4 mb-4">
+        <!-- OFICINA -->
+        <article class="col-lg-4 pb-4">
+          <div class="oficina pb-1 overflow-hidden">
+            <img src="images/categoria1.jpg" alt="" />
+            <h2 class="pt-1 text-center my-3 fs-4 text-primary">Oficina</h2>
+          </div>
+        </article>
+
+        <!-- HOGAR -->
+        <article class="col-lg-4 pb-4">
+          <div class="hogar pb-1 overflow-hidden">
+            <img src="images/categoria2.jpg" alt="" />
+            <h2 class="pt-1 text-center my-3 fs-4 text-primary">Hogar</h2>
+          </div>
+        </article>
+
+        <!-- COCINA -->
+        <article class="col-lg-4">
+          <div class="cocina pb-1 overflow-hidden">
+            <img src="images/categoria3.jpg" alt="" />
+            <h2 class="pt-1 text-center my-3 fs-4 text-primary">Cocina</h2>
+          </div>
+        </article>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-      <section id="footer">
-        <div id="box-categorias">
-          <h3>Categorias</h3>
+    <footer class="text-center text-white">
+      <section id="footer" class="row gx-0 py-5">
+        <!-- CATEGORIAS -->
+        <div id="box-categorias" class="col-lg-4 pb-4 pb-lg-0">
+          <h3>Categorías</h3>
           <nav>
-            <ul>
-              <li><a href="">Cocina</a></li>
-              <li><a href="">Oficina</a></li>
-              <li><a href="">Jardin</a></li>
-              <li><a href="">Cochera</a></li>
-              <li><a href="">Dormitorio</a></li>
+            <ul class="list-unstyled lh-lg">
+              <li><a href="#" class="text-decoration-none">Cocina</a></li>
+              <li><a href="#" class="text-decoration-none">Oficina</a></li>
+              <li><a href="#" class="text-decoration-none">Jardín</a></li>
+              <li><a href="#" class="text-decoration-none">Cochera</a></li>
+              <li><a href="#" class="text-decoration-none">Dormitorios</a></li>
             </ul>
           </nav>
         </div>
-        <div id="box-nosotros">
-          <h3>Nosotros</h3>
+        <!-- SOBRE NOSOTROS -->
+        <div id="box-nosotros" class="col-lg-4 pb-4 pb-lg-0">
+          <h3>Sobre Nosotros</h3>
           <nav>
-            <ul>
-              <li><a href="">Nuestra Historia</a></li>
-              <li><a href="">Mision, vision y valores</a></li>
-              <li><a href="">Carrera</a></li>
-              <li><a href="">Politicas de privacidad</a></li>
-              <li><a href="">Terminos del servicio</a></li>
+            <ul class="list-unstyled lh-lg">
+              <li>
+                <a href="#" class="text-decoration-none">Nuestra Historia</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >Misión, visión y valores</a
+                >
+              </li>
+              <li><a href="#" class="text-decoration-none">Carrera</a></li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >Políticas de privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >Términos del servicio.</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
-        <div id="box-soporte">
+        <!-- SOPORTE -->
+        <div id="box-soporte" class="col-lg-4">
           <h3>Soporte</h3>
           <nav>
-            <ul>
-              <li><a href="">Preguntas frecuentes</a></li>
-              <li><a href="">Ayuda en linea</a></li>
-              <li><a href="">Soporte y seguridad</a></li>
+            <ul class="list-unstyled lh-lg">
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >Preguntas frecuentes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none">Ayuda en línea</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none"
+                  >Confianza y seguridad.</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
       </section>
+
       <section id="disclaimer">
-        <h2>Todos los derechos reservados. Tienda de <span>Muebles</span></h2>
+        <p>Todos los derechos reservados. Tienda de Muebles</p>
       </section>
     </footer>
 
-    <script src="./bootstrap.bundle.min.js"></script>
+    <!--******* MODALES ****** -->
+
+    <!-- MODAL 1 PRODUCTO 1 -->
+    <div
+      class="modal fade"
+      id="producto1"
+      tabindex="-1"
+      aria-labelledby="producto1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto1Label">
+              Producto 1
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción del producto 1
+            <img src="images/producto1.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 PRODUCTO 2-->
+    <div
+      class="modal fade"
+      id="producto2"
+      tabindex="-1"
+      aria-labelledby="producto2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto2Label">
+              Producto 2
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción producto 2
+            <img src="images/producto2.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 PRODUCTO 3-->
+    <div
+      class="modal fade"
+      id="producto3"
+      tabindex="-1"
+      aria-labelledby="producto3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto3Label">
+              Producto 3
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción producto 3
+            <img src="images/producto3.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 PRODUCTO 4-->
+    <div
+      class="modal fade"
+      id="producto4"
+      tabindex="-1"
+      aria-labelledby="producto4Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto4Label">
+              Producto 4
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción producto 4
+            <img src="images/producto4.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 PRODUCTO 5-->
+    <div
+      class="modal fade"
+      id="producto5"
+      tabindex="-1"
+      aria-labelledby="producto5Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto5Label">
+              Producto 5
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción producto 5
+            <img src="images/producto5.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 PRODUCTO 6-->
+    <div
+      class="modal fade"
+      id="producto6"
+      tabindex="-1"
+      aria-labelledby="producto6Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="producto6Label">
+              Producto 6
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-dark">
+            Descripción producto 6
+            <img src="images/producto6.jpg" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
